@@ -1,0 +1,51 @@
+10/21 10:56 - {logs.py:22} - setting logs
+10/21 10:57 - {data_reader.py:97} - loading enh_vs_genes
+10/21 10:57 - {data_reader.py:28} - loading data from /PROJECTS/Sally/PNET_py3_enh_gene/_database/enh_vs_genes/Enh_vs_Genes_matrix_number.txt,
+10/21 11:05 - {data_reader.py:35} - (73347, 30781)
+10/21 11:05 - {data_reader.py:213} - loading response from Enh_vs_Genes_interactions_1Oct.txt
+10/21 11:06 - {data_reader.py:66} - loaded data 73347 samples, 30781 variables, 73347 responses 
+10/21 11:06 - {data_reader.py:67} - 30781
+10/21 11:06 - {pre.py:10} - Pre-processing: None
+10/21 11:06 - {nn.py:112} - class_weight None
+10/21 11:06 - {data_reader.py:97} - loading enh_vs_genes
+10/21 11:06 - {data_reader.py:28} - loading data from /PROJECTS/Sally/PNET_py3_enh_gene/_database/enh_vs_genes/Enh_vs_Genes_matrix_number.txt,
+10/21 11:06 - {data_reader.py:30} - loading from memory cached_data
+10/21 11:06 - {data_reader.py:35} - (73347, 30781)
+10/21 11:06 - {data_reader.py:38} - loading from memory cached_data
+10/21 11:12 - {data_reader.py:66} - loaded data 73347 samples, 30781 variables, 73347 responses 
+10/21 11:12 - {data_reader.py:67} - 30781
+10/21 11:13 - {prostate_models.py:125} - x shape (73347, 30781) , y shape (73347,) info (73347,) genes (30781,)
+10/21 11:13 - {prostate_models.py:127} - x shape (73347, 30781) , y shape (73347,) info (73347,) genes (30781,)
+10/21 11:14 - {builders_utils.py:65} - layer 0 , # of edges  0.0
+10/21 11:14 - {builders_utils.py:65} - layer 1 , # of edges  147.0
+10/21 11:14 - {builders_utils.py:65} - layer 2 , # of edges  26.0
+10/21 11:14 - {builders_utils.py:215} - n_genes, n_pathways 30781 146 
+10/21 11:14 - {builders_utils.py:215} - n_genes, n_pathways 146 26 
+10/21 11:14 - {prostate_models.py:188} - done compiling
+10/21 11:14 - {model_utils.py:36} -   - 0 inputs [(None, 30781)]
+10/21 11:14 - {model_utils.py:36} -   - 1 h0 (None, 30781)
+10/21 11:14 - {model_utils.py:36} -   - 2 dropout_0 (None, 30781)
+10/21 11:14 - {model_utils.py:36} -   - 3 h1 (None, 146)
+10/21 11:14 - {model_utils.py:36} -   - 4 dropout_1 (None, 146)
+10/21 11:14 - {model_utils.py:36} -   - 5 h2 (None, 26)
+10/21 11:14 - {model_utils.py:36} -   - 6 o_linear1 (None, 1)
+10/21 11:14 - {model_utils.py:36} -   - 7 o_linear2 (None, 1)
+10/21 11:14 - {model_utils.py:36} -   - 8 o_linear3 (None, 1)
+10/21 11:14 - {model_utils.py:36} -   - 9 o1 (None, 1)
+10/21 11:14 - {model_utils.py:36} -   - 10 o2 (None, 1)
+10/21 11:14 - {model_utils.py:36} -   - 11 o3 (None, 1)
+10/21 11:14 - {prostate_models.py:192} - None
+10/21 11:14 - {prostate_models.py:193} - # of trainable params of the model is 92837
+10/21 11:14 - {nn.py:198} - start fitting
+10/21 11:14 - {nn.py:212} - class_weight None
+10/21 11:53 - {nn.py:260} - prediction threshold 0.5899999999999997
+10/21 11:59 - {1422650283.py:21} -               precision    recall  f1-score   support
+
+           0       0.65      1.00      0.79      7330
+           1       1.00      0.68      0.81     12444
+
+    accuracy                           0.80     19774
+   macro avg       0.82      0.84      0.80     19774
+weighted avg       0.87      0.80      0.80     19774
+
+10/21 11:59 - {1422650283.py:42} - Test score {'accuracy': 0.7973095984626277, 'precision': 1.0, 'auc': 0.8454580586511885, 'f1': 0.8080459770114943, 'aupr': 0.8884519227005033, 'recall': 0.6779170684667309}

@@ -1,0 +1,67 @@
+10/23 07:34 - {logs.py:22} - setting logs
+10/23 07:34 - {run_me.py:99} - random seed 234
+10/23 07:34 - {one_split.py:132} - loading data....
+10/23 07:34 - {data_reader.py:97} - loading enh_vs_genes
+10/23 07:34 - {data_reader.py:28} - loading data from /PROJECTS/Sally/PNET_py3_enh_gene/_database/enh_vs_genes/Enh_vs_Genes_matrix_number.txt,
+10/23 07:43 - {data_reader.py:35} - (73347, 30781)
+10/23 07:43 - {data_reader.py:213} - loading response from Enh_vs_Genes_interactions_1Oct.txt
+10/23 07:50 - {data_reader.py:66} - loaded data 73347 samples, 30781 variables, 73347 responses 
+10/23 07:50 - {data_reader.py:67} - 30781
+10/23 07:51 - {one_split.py:137} - predicting
+10/23 07:51 - {one_split.py:147} - x_train (63035, 30781) y_train (63035,) 
+10/23 07:51 - {one_split.py:148} - x_test (19774, 30781) y_test (19774,) 
+10/23 07:51 - {one_split.py:151} - preprocessing....
+10/23 07:51 - {one_split.py:303} - preprocessing....
+10/23 07:51 - {pre.py:10} - Pre-processing: None
+10/23 07:51 - {nn.py:112} - class_weight None
+10/23 07:51 - {one_split.py:158} - fitting
+10/23 07:51 - {one_split.py:159} - {'type': 'nn', 'id': 'P-net', 'params': {'build_fn': <function build_pnet2 at 0x7fa5a77d4720>, 'model_params': {'use_bias': True, 'w_reg': [0.001, 0.001, 0.001, 0.001, 0.001, 0.001, 0.001], 'w_reg_outcomes': [0.01, 0.01, 0.01, 0.01, 0.01, 0.01], 'dropout': [0.5, 0.1, 0.1, 0.1], 'loss_weights': [2, 7, 20, 54, 148, 400], 'optimizer': 'Adam', 'activation': 'tanh', 'data_params': {'id': 'ALL', 'type': 'prostate_paper', 'params': {'data_type': 'enh_vs_genes', 'drop_AR': False, 'cnv_levels': 3, 'mut_binary': True, 'balanced_data': False, 'combine_type': 'union', 'use_coding_genes_only': True, 'selected_genes': None, 'training_split': 0}}, 'add_unk_genes': False, 'shuffle_genes': False, 'kernel_initializer': 'lecun_uniform', 'n_hidden_layers': 2, 'attention': False, 'dropout_testing': False}, 'fitting_params': {'samples_per_epoch': 10, 'select_best_model': False, 'monitor': 'val_o6_f1', 'verbose': 2, 'epoch': 300, 'shuffle': True, 'batch_size': 50, 'save_name': 'pnet', 'debug': False, 'save_gradient': False, 'class_weight': None, 'n_outputs': 3, 'prediction_output': 'average', 'early_stop': False, 'reduce_lr': False, 'reduce_lr_after_nepochs': {'drop': 0.25, 'epochs_drop': 50}, 'lr': 0.001, 'max_f1': True}}}
+10/23 07:51 - {data_reader.py:97} - loading enh_vs_genes
+10/23 07:51 - {data_reader.py:28} - loading data from /PROJECTS/Sally/PNET_py3_enh_gene/_database/enh_vs_genes/Enh_vs_Genes_matrix_number.txt,
+10/23 07:51 - {data_reader.py:30} - loading from memory cached_data
+10/23 07:51 - {data_reader.py:35} - (73347, 30781)
+10/23 07:51 - {data_reader.py:38} - loading from memory cached_data
+10/23 07:57 - {data_reader.py:66} - loaded data 73347 samples, 30781 variables, 73347 responses 
+10/23 07:57 - {data_reader.py:67} - 30781
+10/23 07:58 - {prostate_models.py:125} - x shape (73347, 30781) , y shape (73347,) info (73347,) genes (30781,)
+10/23 07:58 - {prostate_models.py:127} - x shape (73347, 30781) , y shape (73347,) info (73347,) genes (30781,)
+10/23 07:58 - {builders_utils.py:65} - layer 0 , # of edges  0.0
+10/23 07:58 - {builders_utils.py:65} - layer 1 , # of edges  147.0
+10/23 07:58 - {builders_utils.py:65} - layer 2 , # of edges  26.0
+10/23 07:58 - {builders_utils.py:215} - n_genes, n_pathways 30781 146 
+10/23 07:58 - {builders_utils.py:215} - n_genes, n_pathways 146 26 
+10/23 07:58 - {prostate_models.py:188} - done compiling
+10/23 07:58 - {model_utils.py:36} -   - 0 inputs [(None, 30781)]
+10/23 07:58 - {model_utils.py:36} -   - 1 h0 (None, 30781)
+10/23 07:58 - {model_utils.py:36} -   - 2 dropout_0 (None, 30781)
+10/23 07:58 - {model_utils.py:36} -   - 3 h1 (None, 146)
+10/23 07:58 - {model_utils.py:36} -   - 4 dropout_1 (None, 146)
+10/23 07:58 - {model_utils.py:36} -   - 5 h2 (None, 26)
+10/23 07:58 - {model_utils.py:36} -   - 6 o_linear1 (None, 1)
+10/23 07:58 - {model_utils.py:36} -   - 7 o_linear2 (None, 1)
+10/23 07:58 - {model_utils.py:36} -   - 8 o_linear3 (None, 1)
+10/23 07:58 - {model_utils.py:36} -   - 9 o1 (None, 1)
+10/23 07:58 - {model_utils.py:36} -   - 10 o2 (None, 1)
+10/23 07:58 - {model_utils.py:36} -   - 11 o3 (None, 1)
+10/23 07:58 - {prostate_models.py:192} - None
+10/23 07:58 - {prostate_models.py:193} - # of trainable params of the model is 92837
+10/23 07:58 - {nn.py:198} - start fitting
+10/23 07:58 - {nn.py:212} - class_weight None
+10/23 09:22 - {nn.py:260} - prediction threshold 0.5899999999999997
+10/23 09:22 - {one_split.py:164} - predicting
+10/23 09:22 - {one_split.py:169} - model id: P-net_ALL
+10/23 09:22 - {one_split.py:292} - predicitng ...
+10/23 09:22 - {evaluate.py:51} -               precision    recall  f1-score   support
+
+           0       0.64      1.00      0.78      7330
+           1       1.00      0.68      0.81     12444
+
+    accuracy                           0.80     19774
+   macro avg       0.82      0.84      0.80     19774
+weighted avg       0.87      0.80      0.80     19774
+
+10/23 09:22 - {one_split.py:173} - model name P-net_ALL -- Test score {'accuracy': 0.7956407403661373, 'precision': 1.0, 'auc': 0.8516285729508855, 'f1': 0.8061591595913081, 'aupr': 0.8930626701828426, 'recall': 0.6752651880424301}
+10/23 09:22 - {one_split.py:176} - saving results
+10/23 09:22 - {one_split.py:275} - saving yml : /PROJECTS/Sally/PNET_py3_enh_gene/_logs/enh_vs"genes/./pnet/onsplit_average_reg_10_tanh_large_testing/P-net_ALL_params.yml
+10/23 09:22 - {one_split.py:76} - saving results : /PROJECTS/Sally/PNET_py3_enh_gene/_logs/enh_vs"genes/./pnet/onsplit_average_reg_10_tanh_large_testing/P-net_ALL_testing.csv
+10/23 09:22 - {one_split.py:239} - saving coef 

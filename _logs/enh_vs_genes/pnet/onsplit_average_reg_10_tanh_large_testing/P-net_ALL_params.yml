@@ -1,0 +1,101 @@
+data_params:
+  id: ALL
+  params:
+    balanced_data: false
+    cnv_levels: 3
+    combine_type: union
+    data_type: enh_vs_genes
+    drop_AR: false
+    mut_binary: true
+    selected_genes: null
+    training_split: 0
+    use_coding_genes_only: true
+  type: prostate_paper
+exp_name: /PROJECTS/Sally/PNET_py3_enh_gene/_logs/enh_vs"genes/./pnet/onsplit_average_reg_10_tanh_large_testing
+features_params: {}
+model_params:
+  id: P-net_ALL
+  params:
+    build_fn: !!python/name:model.builders.prostate_models.build_pnet2 ''
+    fitting_params:
+      batch_size: 50
+      class_weight: null
+      debug: false
+      early_stop: false
+      epoch: 300
+      lr: 0.001
+      max_f1: true
+      monitor: val_o6_f1
+      n_outputs: 3
+      prediction_output: average
+      reduce_lr: false
+      reduce_lr_after_nepochs:
+        drop: 0.25
+        epochs_drop: 50
+      samples_per_epoch: 10
+      save_gradient: false
+      save_name: pnet
+      select_best_model: false
+      shuffle: true
+      verbose: 2
+    model_params:
+      activation: tanh
+      add_unk_genes: false
+      attention: false
+      data_params:
+        id: ALL
+        params:
+          balanced_data: false
+          cnv_levels: 3
+          combine_type: union
+          data_type: enh_vs_genes
+          drop_AR: false
+          mut_binary: true
+          selected_genes: null
+          training_split: 0
+          use_coding_genes_only: true
+        type: prostate_paper
+      dropout:
+      - 0.5
+      - 0.1
+      - 0.1
+      - 0.1
+      dropout_testing: false
+      kernel_initializer: lecun_uniform
+      loss_weights:
+      - 2
+      - 7
+      - 20
+      - 54
+      - 148
+      - 400
+      n_hidden_layers: 2
+      optimizer: Adam
+      shuffle_genes: false
+      use_bias: true
+      w_reg:
+      - 0.001
+      - 0.001
+      - 0.001
+      - 0.001
+      - 0.001
+      - 0.001
+      - 0.001
+      w_reg_outcomes:
+      - 0.01
+      - 0.01
+      - 0.01
+      - 0.01
+      - 0.01
+      - 0.01
+  type: nn
+pipeline_params:
+  params:
+    eval_dataset: test
+    save_train: true
+  type: one_split
+pre_params:
+  type: null
+score: '{''accuracy'': 0.7956407403661373, ''precision'': 1.0, ''auc'': 0.8516285729508855,
+  ''f1'': 0.8061591595913081, ''aupr'': 0.8930626701828426, ''recall'': 0.6752651880424301}'
+task: classification_binary
